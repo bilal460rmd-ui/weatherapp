@@ -1,0 +1,220 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline: none;
+	box-sizing: border-box;
+}
+body{
+	background-color: #292828;
+	text-transform:capitalize;
+    color:white;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;    
+    padding: 2rem;     
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+header{
+	max-width:1200px;
+	margin:auto;
+	padding:2rem 2rem;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.link a{
+	position: relative;
+	display: inline-block;
+	padding-bottom: 3px;
+	color: white;
+	text-decoration: none; 
+	font-size: 20px;
+	transition: 0.3s ease-out;
+	border-radius:10px;
+}
+.link a::after{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 0;
+	bottom: 0;
+	left: 0;
+	background-color: red;
+	transition: all 0.3s ease;
+} 
+.link a:hover::after{
+	width: 100%;
+}
+.container{
+	background-color:#EDDFDF;
+	color:black;
+	height:40px;
+	width:850px;
+	overflow:hidden;
+    border-radius:40px;
+	bottom:500px;
+	position:absolute;
+	transition:0.3s ease-out
+}
+.search{
+	justify-content:center;
+	align-items:center;
+    display:flex;
+		
+}
+.search input{
+    box-sizing: border-box;	
+    font-size:20px;
+    border-radius:40px;
+    text-align:center;
+    height:40px;
+    width:850px;
+	background-color:#EDDFDF;
+}
+.search input::placeholder{
+	text-transform:capitalize;
+	
+}
+.search i{
+	display:flex;
+	position:absolute;
+	left:5px;
+	font-size:25px;
+	background-color:#EDDFDF;
+	border-radius:50%;
+	transition: 0.4s ease-out;
+	width:35px;
+	height:35px;
+	box-sizing:border-box;
+	cursor:pointer;
+	align-items:center;
+	justify-content:center;
+}
+.search button{
+	position:absolute;
+	display:flex;
+	right:5px;
+	font-size:25px;
+	background-color:#EDDFDF;
+	border-radius:50%;
+	transition: 0.4s ease-out;
+	width:35px;
+	height:35px;
+	box-sizing:border-box;
+	cursor:pointer;
+	align-items:center;
+	justify-content:center;
+}
+.search i:hover,
+.search button:hover{
+	background-color: #292828;
+	color:white;
+}
+.notfound{
+	display:none;
+	align-items:center;
+	justify-content:center;
+    text-align:center;
+}
+.notfound img {
+	width: 300px;
+	height: 300px;
+}
+.weatherbox{
+	text-align:center;
+	padding-top:50px;
+}
+.weatherbox .temperature{
+	position: relative;
+    color: black;	
+	padding-top:20px;
+	font-size:20px;
+	font-weight:1000;
+}
+.weatherbox .description{
+	color:black;
+	font-size:22px;
+	font-weight:500;
+	text-transform:capitalize;
+	padding-top:20px;
+	font-size:20px;
+	font-weight:1000;
+}
+.details{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+    margin-top:30px;
+	gap:2rem;
+}
+.details .humidity, .details .wind{
+	display: flex;
+	align-items:center;
+	width:50%;
+	height: 100px;
+}
+.details .humidity{
+	justify-content:flex-start;
+	padding-left:10px;
+}
+.details .wind{
+	justify-content:flex-end;
+	padding-right:10px;
+}
+.details i {
+	padding-right:7px;
+	font-size:30px;
+}
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.notfound, .weatherbox, .details {
+  scale: 0;
+  opacity: 0;
+}
+.weatherbox img {
+  width: 150px;   /* or whatever size */
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.details span{
+	padding-right:10px;
+	font-weight:600;
+}
+.details > div {
+  display: flex;          
+  align-items: center;
+  gap: 5px;             
+  border-radius: 10px;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.details > div:hover {
+  background-color: #B5A9A7;
+}
+
